@@ -24,7 +24,7 @@ if __name__ == "__main__":
     guardador = GuardarTrazas("trazas1.txt")
     gestor = GestorDelPuente(guardador)
     usuarios: list[Usuario] = []
-    num_usuarios = 15
+    num_usuarios = 30
 
     for i in range(num_usuarios):
         t = random.choice(lista_tipo)
