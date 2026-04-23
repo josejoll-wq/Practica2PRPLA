@@ -39,8 +39,7 @@ if __name__ == "__main__":
         u.join()
 
     print("Simulación 'normal' terminada. Trazas guardadas en trazas1.txt")
-    analizar_trazas(archivo="trazas1.txt", num_usuarios=num_usuarios)
-
+  
     # Simulación "solo coches":
 
     guardador = GuardarTrazas("trazas2.txt")
@@ -62,4 +61,25 @@ if __name__ == "__main__":
 
     print("Simulación 'solo coches' terminada. Trazas guardadas en trazas2.txt")
 
-    analizar_trazas(archivo="trazas2.txt", num_usuarios = num_usuarios)
+     # Simulación "100 peatones y 1 coche":
+
+    guardador = GuardarTrazas("trazas3.txt")
+    gestor = GestorDelPuente(guardador)
+    usuarios: list[Usuario] = []
+    num_usuarios = 101
+    tipos = [2] * 100 + [0] * 1
+    
+
+    for i in range(num_usuarios):
+        t = random.choice(tipos)
+        u = Usuario(gestor, t, i)
+        usuarios.append(u)
+        u.start()
+
+        # Añadimos tiempo entre las llegadas de los coches/peatones
+        time.sleep(random.uniform(0, 0.01))
+
+    for u in usuarios:
+        u.join()
+
+    print(f"Simulación terminada con 100 peatones y 1 coche.". Trazas guardadas en trazas2.txt")
