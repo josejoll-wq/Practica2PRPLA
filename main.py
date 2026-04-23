@@ -46,3 +46,4 @@ if __name__ == "__main__":
         u.join()
 
     print("Simulación terminada. Trazas guardadas en trazas.txt")
+    analizar_trazas(archivo="trazas.txt")
