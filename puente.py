@@ -8,9 +8,20 @@ PEATON = 2
 
 lista_tipo = [COCHE_NORTE, COCHE_SUR, PEATON]
 
+class GuardarTrazas:
+    def __init__(self, archivo : str ="trazas.txt"):
+        self.archivo = archivo
+        with open(self.archivo, "w") as f:
+            f.write("")
+
+    def guardar(self, mensaje : str) -> None:
+        with open(self.archivo, "a") as f:
+            f.write(mensaje + "\n")
+        return  None
+
 
 class GestorDelPuente:
-    def __init__(self, guardador):
+    def __init__(self, guardador : GuardarTrazas):
         self.cerrojo = Lock()
         self.guardador = guardador
 
@@ -27,7 +38,7 @@ class GestorDelPuente:
             PEATON: "peaton"
         }
 
-    def pueden_cruzar(self, tipo):
+    def pueden_cruzar(self, tipo : int) -> bool:
         otros_cruzando = sum(self.cruzando[t] for t in lista_tipo if t != tipo)
         if otros_cruzando > 0:
             return False
@@ -38,7 +49,7 @@ class GestorDelPuente:
 
         return True
 
-    def quiero_cruzar(self, tipo, num_usuario):
+    def quiero_cruzar(self, tipo : int, num_usuario : int) -> None:
         with self.cerrojo:
             self.guardador.guardar(f"{self.nombres[tipo]} {num_usuario} pide")
             self.esperando[tipo] += 1
@@ -50,7 +61,9 @@ class GestorDelPuente:
             self.cruzando[tipo] += 1
             self.guardador.guardar(f"{self.nombres[tipo]} {num_usuario} entra")
 
-    def he_cruzado(self, tipo, num_usuario):
+        return None
+
+    def he_cruzado(self, tipo : int, num_usuario : int) -> None:
         with self.cerrojo:
             self.cruzando[tipo] -= 1
             self.guardador.guardar(f"{self.nombres[tipo]} {num_usuario} sale")
@@ -69,7 +82,11 @@ class GestorDelPuente:
             if self.cruzando[tipo] == 0:
                 self.condiciones[self.turno].notify_all()
 
-    def cruzar(self, tipo, num_usuario):
+        return None
+
+    def cruzar(self, tipo : int, num_usuario : int) -> None:
         self.quiero_cruzar(tipo, num_usuario)
         time.sleep(random.uniform(0.1, 0.3))
         self.he_cruzado(tipo, num_usuario)
+
+        return None
