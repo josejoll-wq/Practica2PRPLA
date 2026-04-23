@@ -1,7 +1,7 @@
 import random
 import time
 from threading import Thread
-from puente import GestorDelPuente, GuardarTrazas, lista_tipo
+from puente import GestorDelPuente, lista_tipo
 from analizar_trazas import analizar_trazas
 
 
