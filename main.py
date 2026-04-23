@@ -82,4 +82,4 @@ if __name__ == "__main__":
     for u in usuarios:
         u.join()
 
-    print(f"Simulación terminada con 100 peatones y 1 coche.". Trazas guardadas en trazas2.txt")
+    print(f"Simulación terminada con 100 peatones y 1 coche.. Trazas guardadas en trazas3.txt")
