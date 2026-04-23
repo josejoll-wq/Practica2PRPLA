@@ -1,4 +1,5 @@
-def analizar_trazas(archivo: str = "trazas.txt", num_usuarios : int = 0) -> None:
+num_usuarios = input("Introduce el número total de usuarios que quieren cruzar el puente")
+def analizar_trazas(archivo: str = "trazas.txt", num_usuarios : int) -> None:
     cruzando = {"coche norte": 0, "coche sur": 0, "peaton": 0}
     linea_num = 0
     total_salidas = 0
@@ -32,3 +33,5 @@ def analizar_trazas(archivo: str = "trazas.txt", num_usuarios : int = 0) -> None
 
     print("El análisis ha finalizado. Si no hay mensajes de ERROR, la traza es correcta.")
     return None
+
+analizar_trazas()
