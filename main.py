@@ -1,19 +1,9 @@
 import random
 import time
 from threading import Thread
-from puente import GestorDelPuente, lista_tipo
+from puente import GestorDelPuente, GuardarTrazas, lista_tipo
 from analizar_trazas import analizar_trazas
 
-class GuardarTrazas:
-    def __init__(self, archivo : str ="trazas.txt"):
-        self.archivo = archivo
-        with open(self.archivo, "w") as f:
-            f.write("")
-
-    def guardar(self, mensaje : str) -> None:
-        with open(self.archivo, "a") as f:
-            f.write(mensaje + "\n")
-        return  None
 
 class Usuario(Thread):
     def __init__(self, gestor : GestorDelPuente, tipo : int, num_usuario : int):
@@ -21,7 +11,7 @@ class Usuario(Thread):
         self.gestor = gestor
         self.tipo = tipo
         self.num_usuario = num_usuario
-
+        
     def run(self)-> None:
         self.gestor.cruzar(self.tipo, self.num_usuario)
         return None
@@ -56,7 +46,7 @@ if __name__ == "__main__":
     guardador = GuardarTrazas("trazas2.txt")
     gestor = GestorDelPuente(guardador)
     usuarios: list[Usuario] = []
-    num_usuarios = 15
+    num_usuarios = 30
 
     for i in range(num_usuarios):
         t = random.choice([0,1])
