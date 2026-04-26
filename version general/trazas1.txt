@@ -1,0 +1,90 @@
+motocicleta 0 pide
+motocicleta 0 entra
+coche norte 1 pide
+coche sur 2 pide
+ambulancia sur 3 pide
+peaton 4 pide
+coche sur 5 pide
+bicicleta 6 pide
+bicicleta 7 pide
+coche sur 8 pide
+coche norte 9 pide
+peaton 10 pide
+coche sur 11 pide
+coche sur 12 pide
+peaton 13 pide
+bicicleta 14 pide
+coche sur 15 pide
+ambulancia norte 16 pide
+bicicleta 17 pide
+ganado 18 pide
+ambulancia sur 19 pide
+coche sur 20 pide
+ambulancia norte 21 pide
+ganado 22 pide
+peaton 23 pide
+peaton 24 pide
+ganado 25 pide
+coche sur 26 pide
+bicicleta 27 pide
+peaton 28 pide
+motocicleta 0 sale
+ambulancia sur 3 entra
+ambulancia sur 19 entra
+coche norte 29 pide
+ambulancia sur 19 sale
+ambulancia sur 3 sale
+ambulancia norte 16 entra
+ambulancia norte 21 entra
+ambulancia norte 16 sale
+ambulancia norte 21 sale
+bicicleta 6 entra
+bicicleta 14 entra
+bicicleta 7 entra
+bicicleta 17 entra
+bicicleta 27 entra
+bicicleta 6 sale
+bicicleta 27 sale
+bicicleta 14 sale
+bicicleta 7 sale
+bicicleta 17 sale
+coche norte 9 entra
+coche norte 1 entra
+coche norte 29 entra
+coche norte 29 sale
+coche norte 9 sale
+coche norte 1 sale
+coche sur 11 entra
+coche sur 12 entra
+coche sur 15 entra
+coche sur 26 entra
+coche sur 5 entra
+coche sur 2 entra
+coche sur 8 entra
+coche sur 20 entra
+coche sur 2 sale
+coche sur 26 sale
+coche sur 20 sale
+coche sur 12 sale
+coche sur 5 sale
+coche sur 15 sale
+coche sur 11 sale
+coche sur 8 sale
+peaton 4 entra
+peaton 10 entra
+peaton 23 entra
+peaton 13 entra
+peaton 24 entra
+peaton 28 entra
+peaton 10 sale
+peaton 28 sale
+peaton 24 sale
+peaton 13 sale
+peaton 4 sale
+peaton 23 sale
+ganado 22 entra
+ganado 18 entra
+ganado 25 entra
+ganado 18 sale
+ganado 25 sale
+ganado 22 sale
