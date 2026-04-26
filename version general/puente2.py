@@ -85,7 +85,7 @@ class GestorDelPuente:
             if otros_esperando > 0:
                 indice_actual = self.lista_tipos.index(tipo)
 
-                #
+                # Hacemos un bucle y buscamos el primer tipo más próximo que esté esperando para darle el turno
                 for i in range(1, self.num_tipos):
                         indice_sig = (indice_actual + i) % self.num_tipos
                         tipo_sig = self.lista_tipos[indice_sig]
