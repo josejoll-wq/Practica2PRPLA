@@ -31,8 +31,8 @@ class GestorDelPuente:
             COCHE_SUR: "coche sur",
             PEATON: "peaton",
             GANADO: "ganado",
-            AMBULANCIA_NORTE: "ambulancia_norte",
-            AMBULANCIA_SUR: "ambulancia_sur"
+            AMBULANCIA_NORTE: "ambulancia norte",
+            AMBULANCIA_SUR: "ambulancia sur"
         }
 
     def pueden_cruzar(self, tipo : int) -> bool:
